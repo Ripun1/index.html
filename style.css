@@ -1,0 +1,58 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  background-color: #4CAF50; /* Green header background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.header-image img {
+  width: 150px; /* Slightly larger for decoration */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px; /* Center the image with some spacing */
+}
+
+/* Navigation Styles */
+header nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* About Section Styles */
+.about-image {
+  width: 50%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Center the image and add spacing */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for aesthetics */
+}
+
+/* Section and Footer Styles */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #4CAF50; /* Green footer background */
+  color: white;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V&P Official Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // JavaScript to change background color dynamically
+    function changeBackgroundColor() {
+      const colors = ['#FFEBEE', '#E3F2FD', '#E8F5E9', '#FFFDE7', '#F3E5F5']; // Array of soft natural colors
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Call the function on page load
+    window.onload = changeBackgroundColor;
+  </script>
+</head>
+<body>
+  <header>
+    <h1>স্বাগতম V&P Official Website</h1>
+    <nav>
+      <a href="about.html">About / আমাৰ বিষয়ে</a>
+      <a href="contact.html">Contact / যোগাযোগ কৰক</a>
+      <a href="blog.html">Blog / ব্লগ</a>
+    </nav>
+  </header>
+
+  <footer>
+    <p>&copy; 2024 V&P Official. All rights reserved.</p>
+  </footer>
+</body>
+</html>

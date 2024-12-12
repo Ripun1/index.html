@@ -1,0 +1,86 @@
+<section id="blog">
+  <h2>Blog / ব্লগ</h2>
+  <p>Write freely on the topics that matter to you. No judgment, just expression. Choose your category:</p>
+
+  <form action="blog_posts.html" method="POST">
+    <label for="name">Name (Optional for anonymity):</label>
+    <input type="text" id="name" name="name">
+
+    <label for="category">Category:</label>
+    <select id="category" name="category">
+      <option value="politics">Politics</option>
+      <option value="culture">Culture</option>
+      <option value="society">Society</option>
+      <option value="others">Others</option>
+    </select>
+
+    <label for="content">Your Thoughts:</label>
+    <textarea id="content" name="content"></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>All Posts</h3>
+
+  <!-- Dynamic display of posts -->
+  <div id="posts-container">
+    <!-- Example post -->
+    <div class="post">
+      <h4>John Doe</h4>
+      <p>Politics</p>
+      <p>Your thoughts here...</p>
+
+      <div class="reactions">
+        <button class="like-btn">👍 Like</button>
+        <button class="dislike-btn">👎 Dislike</button>
+      </div>
+
+      <h5>Comments</h5>
+      <textarea class="comment-box" placeholder="Write a comment..."></textarea>
+      <button class="comment-submit-btn">Submit</button>
+      <div class="comments">
+        <!-- Display comments -->
+        <p>Great thoughts!</p>
+        <p>Thanks for sharing!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const likeButtons = document.querySelectorAll('.like-btn');
+    const dislikeButtons = document.querySelectorAll('.dislike-btn');
+    const commentSubmitButtons = document.querySelectorAll('.comment-submit-btn');
+
+    likeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Handle like button click
+        alert('Liked!');
+      });
+    });
+
+    dislikeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Handle dislike button click
+        alert('Disliked!');
+      });
+    });
+
+    commentSubmitButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const commentBox = button.previousElementSibling;
+        const commentText = commentBox.value;
+
+        if (commentText) {
+          const commentsContainer = button.parentElement.querySelector('.comments');
+          const newComment = document.createElement('p');
+          newComment.textContent = commentText;
+          commentsContainer.appendChild(newComment);
+          commentBox.value = '';
+        }
+      });
+    });
+  });
+</script>
+
